@@ -9,3 +9,7 @@ seasons = seasons_array.map do |s|
 	  :link =>  s['href'],
 	}
 end
+puts seasons
+seasons.each do |s| 
+	season_html = Nokogiri::HTML(open(base_url+s[:link]))
+end
